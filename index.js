@@ -12,6 +12,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
   console.log(peer);
 
   peer.on('signal', function (data) {
+    console.log("value"+JSON.stringify(data));
     document.getElementById('yourId').value = JSON.stringify(data)
   })
 
